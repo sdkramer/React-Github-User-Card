@@ -1,28 +1,33 @@
 import React from 'react';
 
-class Followers extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
+const Followers = (props) => {
+  // constructor(props) {
+  //   super(props);
+   
     
-  }
-
-  render () {
-    return (
-      <div className='followers-container'>
-      <img src={this.props.user.avatar_url} alt='my photo'/>
-      <div>
-      <h3>{this.props.user.name}</h3>
-  <p>{this.props.user.bio}</p>
-  <p>Location: {this.props.user.location}</p>
-  <p>Github: <a href={this.props.user.html_url}>link to github</a></p>
-  <p></p>
-      </div>
+  // }
   
+ 
+    
 
-    </div>
-    )
+const fs  = props.followers;
+console.log(fs[2]);
+    return (
+    
+
+      <div>Followers</div>
+
+  //       {fs.map(follower => (
+  //         <div className='followers-container'>
+  // <img src={follower.avatar_url} alt='follower photo'/>
+  // <h3>{follower.login}</h3>
+  // <p>Github: <a href={follower.html_url}>link to github</a></p>
+  // <div>
+  //       ))}
+    
+    
+    );
   }
-}
+
 
 export default Followers;
