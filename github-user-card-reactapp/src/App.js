@@ -37,6 +37,7 @@ render() {
     <div className="App">
 <h1>Sean Kramer on Github</h1>
 <UserCard user={this.state.user}/>
+<h2>My Followers</h2>
 <Followers followers={this.state.followers}/>
     </div>
   );
