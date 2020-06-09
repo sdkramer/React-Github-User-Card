@@ -6,10 +6,19 @@ const Followers = (props) => {
 console.log(props.followers);
 
 const followersInfo = props.followers.map((follower) => {
-  return <div>
+  return <div key={follower.id} className='ui card'>
+    <div className='image'>
     <img src={follower.avatar_url} />
-    <h3>{follower.login}</h3>
-    <p>Github: <a href={follower.html_url}>link to github</a></p>
+    </div>
+    <div className='content'>
+    <a className='header'>{follower.login}</a>
+    <div className='link'>
+    Github: <a href={follower.html_url}>link to github</a>
+    </div>
+    
+    </div>
+    
+  
     </div>
 })
 

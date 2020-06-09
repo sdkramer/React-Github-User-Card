@@ -34,10 +34,13 @@ componentDidMount () {
 
 render() {
   return (
-    <div className="App">
+    <div className="ui container">
 <h1>Sean Kramer on Github</h1>
 <UserCard user={this.state.user}/>
-<h2>My Followers</h2>
+<h2 class="ui center aligned icon header">
+  <i class="circular users icon"></i>
+  Friends
+</h2>
 <Followers followers={this.state.followers}/>
     </div>
   );

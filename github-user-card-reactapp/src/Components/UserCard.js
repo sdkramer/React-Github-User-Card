@@ -9,14 +9,22 @@ class UserCard extends React.Component {
 
   render() {
     return (
-      <div className='usercard-container'>
+      <div className='ui card'>
+        <div className='image'>
         <img src={this.props.user.avatar_url} alt='my photo'/>
-        <div>
-        <h3>{this.props.user.name}</h3>
-    <p>{this.props.user.bio}</p>
-    <p>Location: {this.props.user.location}</p>
-    <p>Github: <a href={this.props.user.html_url}>link to github</a></p>
-    <p></p>
+        </div>
+       
+        <div className='content'>
+        <a className='header'>{this.props.user.name}</a>
+        <div className='meta'>
+        <span>{this.props.user.bio}</span>
+        </div>
+        <div className='location'>
+        Location: {this.props.user.location}
+        </div>
+        <div className='link'>
+        Github: <a href={this.props.user.html_url}>link to github</a>
+        </div>
         </div>
     
 
